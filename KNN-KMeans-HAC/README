@@ -1,0 +1,20 @@
+All the scripts have their commands commented out at the end of their respected scripts.
+
+Usage of knn.py:
+main(valuesOfK,kFoldAMount)
+test(BestKValue)
+Example usage:
+main(200,10), where 200 is the maximum k value (k=1,2,3...100 will be tried in our case), and 10 is the folding amount(used in the cross validation). This functin outputs the plot as knn_graph.png
+test(11), where 11 is the best value of k to test the test data
+
+Usage of kmeans.py:
+main(tryNTimes)
+plots()
+Example usage:
+main(10), where 10 is the number of tries to decide for the lowest objective function for the corresponding k value. k=1,2,...10 are tried and is hardcoded inside script.
+plots(), will plot the data and save it in the following way: str(i+1)+'th_kmeans_graph.png' where "i+1" is the ith data.
+
+Usage of hac.py:
+main(): automatically does the computations demanded in the homework and saves the plots. Plots are named data_names[i]+"_"+criterion_names[j]+'.png'.
+
+
