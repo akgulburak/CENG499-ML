@@ -1,0 +1,30 @@
+Usage of functions (examples and details are explained later)
+main(path, portion): Does the training
+predict(modelpath,path,portion,layersize,hiddensize,activation): Does the prediction
+These functions are the members of main.py
+
+Example usage is given in the bottom part of the code (main.py). They can be uncommented (predict would work if there is a model with that name exists).
+
+-To run training, main() function should be called with dataset location and the portion of the dataset should be given as parameters.
+The main function saves the model with the name [n+layered_learningrate_activationfunction+hiddenlayersize].
+Example for this would be "3layered_0.0003_sigmoid2048". where 3 is the number of layers, 0.0003 is the learning rate, sigmoid is the
+activation function and 2048 is the hidden layer size. 1 layered models are saved without n+layered and activationfunction+hiddenlayersize parts:
+(For example, "saved_model_0.0003", where there is only the learning rate). 
+
+Eg for the usage of the function:
+main("data","train")
+Where the data is the folder where "train" and "test" folders resides. Portion name should be "train" for the code to work.
+
+-To run predictions, predict() function should be called with parameters listed below:
+-modelpath: model's name to be loaded that would make the prediction
+-path: path of the dataset
+-portion: portion of the dataset
+-layersize: the layersize (should be 1,2 or 3)
+-hiddensize: hidden layer size (should be 1024, 1536 or 2048)
+-activation: activation function (should be sigmoid, tanh or relu)
+
+Eg for the usage of the function:
+predict("3layered_0.0003_sigmoid2048","data","train",3,2048,"sigmoid")
+Where the data is the folder where "train" and "test" folders resides. Portion can be "train" or "test". If it is "train" (where there is a "label.txt" file with labels for images are defined), then the calculated accuracy would be written to the console and there will be "labels.txt" file with the predictions outputted to the current folder. If it is "test", only the "labels.txt" file would be generated.
+
+-The trainings will be done in 50 epochs when main() is called. Different hyperparameters like activation function, learning rate etc. are tested in a for loop, so there will be total of 108 experiments if main("data","train") function is called.
