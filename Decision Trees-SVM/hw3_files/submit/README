@@ -1,0 +1,33 @@
+My files for first and second parts respectively: decision.py and svm.py
+
+For the decision tree (first) part:
+Uncomment the bottom-most "main()" function in the decision.py file to run the code.
+
+I commented below lines in the main() function:
+gra1.render('info_gain_preprune.pdf')
+gra2.render('info_gain_no_preprune.pdf')
+gra3.render('avg_gini_index_preprune.pdf')
+gra4.render('avg_gini_index_no_preprune.pdf')
+Uncommenting them in the main function results in drawing the trees also, or only the prediction results would show up.
+The function "main()" does the tree construction and predictions. Uncommenting it is enough.
+
+#######################
+
+For the SVM (second) part:
+Uncomment the bottom-most functions in the svm.py file to run the code.
+
+first_part(): For the first part (figures are drawn with graphviz also)
+second_part(): For the second part (figures are drawn with graphviz also)
+
+---
+third_part(): For the third part.
+third_part_test(100,0.01,"rbf"): For seeing the best result of the classification.
+First argument is "C", second is "gamma", and the third is "kernel".
+Usage: third_part_test(C, gamma, kernel)
+I hardcoded the "third_part_test(100,0.01,"rbf")" function because that was
+the best result.
+---
+
+fourth_part(): For the fourth part.
+
+
